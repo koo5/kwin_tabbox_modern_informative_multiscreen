@@ -25,6 +25,7 @@ KWin.Switcher {
         console.log("About to create Repeater with model:", screenConfigs.length);
     }
     
+    
 
     /**
     * Returns the caption with adjustments for minimized items.
@@ -44,9 +45,6 @@ KWin.Switcher {
         property string longestCaption: tabBox.model ? tabBox.model.longestCaption() : ""
         text: itemCaption(longestCaption, true)
         
-        onWidthChanged: {
-            console.log("TextMetrics width changed to:", width, "text:", text);
-        }
     }
 
     onVisibleChanged: {
